@@ -2,10 +2,10 @@ package com.andyiac.button.selecter;
 
 import android.content.Context;
 import android.util.AttributeSet;
-import android.widget.Button;
+import android.widget.TextView;
 
 
-public class SelectView extends Button {
+public class SelectView extends TextView {
 
     private boolean mChecked = false;
 
@@ -31,12 +31,14 @@ public class SelectView extends Button {
     }
 
     private void setPressedState() {
-        this.setBackgroundResource(R.drawable.bg_alibuybutton_pressed);
+        this.setBackgroundResource(R.drawable.select_bg_checked);
+//        this.setTextColor(android.R.color.white);
         mChecked = true;
     }
 
     private void setDefaultState() {
-        this.setBackgroundResource(R.drawable.bg_alibuybutton_default);
+        this.setBackgroundResource(R.drawable.select_bg_normal);
+//        this.setTextColor(android.R.color.darker_gray);
         mChecked = false;
     }
 }
