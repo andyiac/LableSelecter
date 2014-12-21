@@ -21,7 +21,5 @@ public class SelecterActivity extends Activity {
                 selectView.mToggle();
             }
         });
-
-
     }
 }
