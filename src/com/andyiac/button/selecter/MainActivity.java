@@ -6,7 +6,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 
 public class MainActivity extends Activity {
-    private SelectView selectView;
     private FlowLayout flowLayout;
 
     private String[] mVals = new String[]
@@ -18,16 +17,6 @@ public class MainActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
-        selectView = (SelectView) findViewById(R.id.id_btn_selecter);
-        selectView.setText("000");
-        selectView.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                selectView.mToggle();
-            }
-        });
-
         flowLayout = (FlowLayout) findViewById(R.id.flow_layout);
         initData();
     }

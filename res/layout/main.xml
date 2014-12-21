@@ -9,17 +9,11 @@
             android:layout_height="wrap_content"
             android:text="Hello World, Selecter"/>
 
-    <com.andyiac.button.selecter.SelectView
-            android:id="@+id/id_btn_selecter"
-            android:layout_width="wrap_content"
-            android:textColor="@android:color/black"
-            android:layout_height="wrap_content"
-            android:text="Selecter"/>
 
     <com.andyiac.button.selecter.FlowLayout
             android:id="@+id/flow_layout"
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="fill_parent">
 
     </com.andyiac.button.selecter.FlowLayout>
 
