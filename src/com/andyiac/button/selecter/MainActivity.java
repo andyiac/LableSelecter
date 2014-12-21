@@ -1,7 +1,6 @@
 package com.andyiac.button.selecter;
 
 import android.app.Activity;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -21,7 +20,6 @@ public class MainActivity extends Activity {
         setContentView(R.layout.main);
         selectView = (SelectView) findViewById(R.id.id_btn_selecter);
         selectView.setText("000");
-        selectView.setTextColor(Color.GRAY);
         selectView.setOnClickListener(new View.OnClickListener() {
 
             @Override

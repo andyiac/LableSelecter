@@ -1,6 +1,7 @@
 package com.andyiac.button.selecter;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.util.AttributeSet;
 import android.widget.TextView;
 
@@ -32,15 +33,15 @@ public class SelectView extends TextView {
 
     private void setPressedState() {
         this.setBackgroundResource(R.drawable.select_bg_checked);
-//        this.setBackground(getContext().getResources().getDrawable(R.drawable.select_bg_checked));
-//        this.setTextColor(android.R.color.white);
+        this.setTextColor(Color.WHITE);
+        // this.setBackground(getContext().getResources().getDrawable(R.drawable.select_bg_checked));
         mChecked = true;
     }
 
     private void setDefaultState() {
 //        this.setBackground(getContext().getResources().getDrawable(R.drawable.select_bg_normal));
         this.setBackgroundResource(R.drawable.select_bg_normal);
-//        this.setTextColor(android.R.color.darker_gray);
+        this.setTextColor(Color.GRAY);
         mChecked = false;
     }
 }
