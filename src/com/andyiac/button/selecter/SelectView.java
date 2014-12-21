@@ -32,11 +32,13 @@ public class SelectView extends TextView {
 
     private void setPressedState() {
         this.setBackgroundResource(R.drawable.select_bg_checked);
+//        this.setBackground(getContext().getResources().getDrawable(R.drawable.select_bg_checked));
 //        this.setTextColor(android.R.color.white);
         mChecked = true;
     }
 
     private void setDefaultState() {
+//        this.setBackground(getContext().getResources().getDrawable(R.drawable.select_bg_normal));
         this.setBackgroundResource(R.drawable.select_bg_normal);
 //        this.setTextColor(android.R.color.darker_gray);
         mChecked = false;
