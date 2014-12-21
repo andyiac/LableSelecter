@@ -9,13 +9,18 @@
             android:layout_height="wrap_content"
             android:text="Hello World, Selecter"/>
 
-
-    <com.andyiac.button.selecter.FlowLayout
-            android:id="@+id/flow_layout"
+    <ScrollView
             android:layout_width="fill_parent"
             android:layout_height="fill_parent">
 
-    </com.andyiac.button.selecter.FlowLayout>
+        <com.andyiac.button.selecter.FlowLayout
+                android:id="@+id/flow_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+        </com.andyiac.button.selecter.FlowLayout>
+
+    </ScrollView>
 
 
 </LinearLayout>
