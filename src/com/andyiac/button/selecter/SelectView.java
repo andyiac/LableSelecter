@@ -5,6 +5,8 @@ import android.graphics.Color;
 import android.util.AttributeSet;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 
 public class SelectView extends TextView {
 
@@ -24,31 +26,41 @@ public class SelectView extends TextView {
         setDefaultState();
     }
 
-    public String mToggle() {
-        String lable = "";
-        if (mChecked)
-            lable = setDefaultState();
-        else {
-            lable = setPressedState();
-        }
+    public ArrayList<String> mToggle(ArrayList<String> lables) {
 
-        return lable;
+        if (lables.size() >= 5 && !mChecked) return lables;
+
+        if (mChecked) {
+            lables = setNormalState(lables);
+        } else {
+            lables = setPressedState(lables);
+        }
+        return lables;
     }
 
-    private String setPressedState() {
+    private ArrayList<String> setPressedState(ArrayList<String> lables) {
         this.setBackgroundResource(R.drawable.select_bg_checked);
         this.setTextColor(Color.WHITE);
         // this.setBackground(getContext().getResources().getDrawable(R.drawable.select_bg_checked));
+        lables.add(this.getText().toString());
         mChecked = true;
-        return this.getText().toString();
+
+        return lables;
     }
 
-    private String setDefaultState() {
+    private ArrayList<String> setNormalState(ArrayList<String> lables) {
+//        this.setBackground(getContext().getResources().getDrawable(R.drawable.select_bg_normal));
+        this.setBackgroundResource(R.drawable.select_bg_normal);
+        this.setTextColor(Color.GRAY);
+        lables.remove(this.getText().toString());
+        mChecked = false;
+        return lables;
+    }
+
+    private void setDefaultState() {
 //        this.setBackground(getContext().getResources().getDrawable(R.drawable.select_bg_normal));
         this.setBackgroundResource(R.drawable.select_bg_normal);
         this.setTextColor(Color.GRAY);
         mChecked = false;
-        return "_remove" + this.getText().toString();
-
     }
 }
