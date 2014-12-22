@@ -24,24 +24,31 @@ public class SelectView extends TextView {
         setDefaultState();
     }
 
-    public void mToggle() {
+    public String mToggle() {
+        String lable = "";
         if (mChecked)
-            setDefaultState();
-        else
-            setPressedState();
+            lable = setDefaultState();
+        else {
+            lable = setPressedState();
+        }
+
+        return lable;
     }
 
-    private void setPressedState() {
+    private String setPressedState() {
         this.setBackgroundResource(R.drawable.select_bg_checked);
         this.setTextColor(Color.WHITE);
         // this.setBackground(getContext().getResources().getDrawable(R.drawable.select_bg_checked));
         mChecked = true;
+        return this.getText().toString();
     }
 
-    private void setDefaultState() {
+    private String setDefaultState() {
 //        this.setBackground(getContext().getResources().getDrawable(R.drawable.select_bg_normal));
         this.setBackgroundResource(R.drawable.select_bg_normal);
         this.setTextColor(Color.GRAY);
         mChecked = false;
+        return "_remove" + this.getText().toString();
+
     }
 }

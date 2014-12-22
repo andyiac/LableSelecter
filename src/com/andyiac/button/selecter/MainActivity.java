@@ -2,8 +2,13 @@ package com.andyiac.button.selecter;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Toast;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends Activity {
     private FlowLayout flowLayout;
@@ -21,6 +26,9 @@ public class MainActivity extends Activity {
         initData();
     }
 
+
+    private List<String> lables = new ArrayList<String>();
+
     public void initData() {
         LayoutInflater mInflater = LayoutInflater.from(this);
 
@@ -31,7 +39,20 @@ public class MainActivity extends Activity {
             tv.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    tv.mToggle();
+                    if (lables.size() >= 5 && !tv.mToggle().toString().startsWith("_remove")) {
+                        Toast.makeText(MainActivity.this, "最多添加5个标签", Toast.LENGTH_SHORT).show();
+                        return;
+                    }
+                    String lable = tv.mToggle();
+                    lables.add(lable);
+
+                    if (lable.startsWith("_remove")) {
+                        lables.remove(lable.substring("_remove".length() - 1, lable.length() - 1));
+                        Log.e("TAG", "=====lables===>>" + lables);
+                        Toast.makeText(MainActivity.this, "删除标签" + lable, Toast.LENGTH_SHORT).show();
+                    }
+
+
                 }
             });
         }
