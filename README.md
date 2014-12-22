@@ -7,7 +7,7 @@ This is a tool for your APP to select lable like this:
 ![Screenshot](https://github.com/andyiac/LableSelecter/blob/master/screen_shot/SelecterView.png)
 
 Select five lable at most.
-Thinks
+Thanks
 -------------
 hyman [FlowLayout](http://blog.csdn.net/lmj623565791/article/details/38352503)
 
