@@ -30,13 +30,8 @@ public class MainActivity extends Activity {
     public void initData() {
         LayoutInflater mInflater = LayoutInflater.from(this);
 
-//        for (int i = 0; i < mVals.length; i++) {
-//            lables.add(mVals[i]);
-//        }
 
         // todo 传给 SelectView 一个空的list 点击就增加和删除
-
-        // todo
 
         for (int i = 0; i < mVals.length; i++) {
             final SelectView sv = (SelectView) mInflater.inflate(R.layout.select_view_item, flowLayout, false);
@@ -52,32 +47,6 @@ public class MainActivity extends Activity {
 
         }
 
-
-//        for (int i = 0; i < mVals.length; i++) {
-//
-//            final SelectView tv = (SelectView) mInflater.inflate(R.layout.select_view_item, flowLayout, false);
-//            tv.setText(mVals[i]);
-//            flowLayout.addView(tv);
-//            tv.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View v) {
-//                    if (lables.size() >= 5 && !tv.mToggle().toString().startsWith("_remove")) {
-//                        Toast.makeText(MainActivity.this, "最多添加5个标签", Toast.LENGTH_SHORT).show();
-//                        return;
-//                    }
-//                    String lable = tv.mToggle();
-//                    lables.add(lable);
-//
-//                    if (lable.startsWith("_remove")) {
-//                        lables.remove(lable.substring("_remove".length() - 1, lable.length() - 1));
-//                        Log.e("TAG", "=====lables===>>" + lables);
-//                        Toast.makeText(MainActivity.this, "删除标签" + lable, Toast.LENGTH_SHORT).show();
-//                    }
-//
-//
-//                }
-//            });
-//        }
     }
 
 }
