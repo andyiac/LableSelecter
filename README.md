@@ -3,8 +3,12 @@ LableSelecter
 
 Dercription
 -------------
+wrap automatically , tag select
+
 This is a tool for your APP to select lable like this:
 ![Screenshot](https://github.com/andyiac/LableSelecter/blob/master/screen_shot/SelecterView.png)
+
+
 
 Select five lable at most.
 Thanks
