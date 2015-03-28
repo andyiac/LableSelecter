@@ -1,7 +1,8 @@
 LableSelecter
 =============
 
-Dercription
+
+Description
 -------------
 automatically wrap, tag select
 
